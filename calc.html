@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            background-color: #2d5271;
+        }
+
+        .container {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            gap: 9px;
+            padding: 11px;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            background-color: rgb(38, 41, 70);
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto auto auto;
+            gap: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 300px;
+            height: 245px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            color: rgb(54, 52, 52);
+            background-color: rgb(239, 232, 232);
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .input {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: right;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 2px;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(28, 30, 50);
+            color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            max-width: 297px;
+
+        }
+
+        .small {
+            font-size: 10px;
+            padding: 2px 15px;
+        }
+
+        .big {
+            padding: 2px 25px;
+        }
+
+        .reset {
+            background-color: rgb(117 125 173);
+            color: white;
+            grid-row: 6/7;
+            grid-column: 1/3;
+            padding: 9px 25px;
+
+        }
+        .del{
+            background-color: rgb(117 125 173);
+            color: white;
+        }
+
+        .ans {
+            background-color: red;
+            color: white;
+            grid-row: 6/7;
+            grid-column: 3/5;
+            padding: 2px 25px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script src="calc.js"></script>
+    <h1>Calculator</h1>
+
+    <div class="container">
+        <input class="input" type="text" name="textarea" id="textarea" readonly>
+        <div class="buttons">
+            <button class="button big" onclick="display('7')">7</input>
+                <button class="button big" onclick="display('8')">8</button>
+                <button class="button big" onclick="display('9')">9</button>
+                <button class="button small del" onclick="Delete()">DEL</button>
+                <button class="button big" onclick="display('4')">4</button>
+                <button class="button big" onclick="display('5')">5</button>
+                <button class="button big" onclick="display('6')">6</button>
+                <button class="button big" onclick="display('+')">+</button>
+                <button class="button big" onclick="display('1')">1</button>
+                <button class="button big" onclick="display('2')">2</button>
+                <button class="button big" onclick="display('3')">3</button>
+                <button class="button big" onclick="display('-')">-</button>
+                <button class="button big" onclick="display('.')">.</button>
+                <button class="button big" onclick="display('0')">0</button>
+                <button class="button big" onclick="display('/')">/</button>
+                <button class="button big" onclick="display('*')">x</button>
+                <button class="button reset small" onclick="reset()">RESET</button>
+                <button class="button ans small" onclick="ans()">=</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
